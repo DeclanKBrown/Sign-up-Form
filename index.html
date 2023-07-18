@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <<script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Sign Up</title>
+</head>
+<body>
+    <nav>
+        <a href="#">Log In</a>
+        <button type="button"><i class="fa-duotone fa-moon"></i></button>
+        <button type="button">Create Account</button>
+    </nav>
+    <section class="main">
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Create Account</legend>
+
+                <label for="user-name">USERNAME</label>
+                <input type="text" id="user-name" name="user-name" pattern="^[a-z\d\.]{5,15}$">
+
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone-number">PHONE NUMBER</label>
+                <input type="tel" id="phone-number" name="phone-number" placeholder="0123 456 789" pattern="\d{4}[\' ']\d{3}[\' ']\d{3}" required>
+
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                <button type="button"><i class="fa-solid fa-eye-slash"></i></button>
+
+                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <input type="password" id="confirm-password" name="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                <button type="button"><i class="fa-solid fa-eye-slash"></i></button>
+
+                <button type="submit">CREATE ACCOUNT</button>
+            </fieldset>
+        </form>
+        <h3>Already have an account? <a href="#">Log in</a></h3>
+    </section>
+    <span>Copyright © 2023 DeclanKB </span><i class="fab fa-github"></i>
+</body>
+</html>
