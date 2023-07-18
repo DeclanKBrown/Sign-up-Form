@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #F9FAFB ;
+    --front-color: #FFFFFF;
+    --outline-color: #E4E7EB ;
+    --text-color: #000000;
+    --text-secondary-color: #8E949F;
+    --btn-color: #0C766E;
+    --error-color: #ff0000;
+    --header-height: 3rem;
+    --footer-height: 3rem;
+    --main-height: calc(100vh - var(--header-height) - var(--footer-height));
+    --theme-name: "light";
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #101827;
+        --front-color: #1F2937;
+        --outline-color: #373F4B;
+        --text-color: #D1D5DA;
+        --text-secondary-color: #9CA3AF;
+        --btn-color: #0C766E;
+        --error-color: #ff0000;
+        --header-height: 3rem;
+        --footer-height: 3rem;
+        --main-height: calc(100vh - var(--header-height) - var(--footer-height));
+        --theme-name: "dark";
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: var(--text-color);
+}
+
+.nav {
+    width: 100vw;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--front-color);
+    border-bottom: 1px solid var(--outline-color);
+}
+
+.main {
+    width: 100vw;
+    height: var(--main-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.main-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40vw;
+    height: 60vh;
+    background-color: var(--front-color);
+    border: 1px solid var(--outline-color);
+    border-radius: 1rem;
+    box-shadow: 10px var(--front-color);
+    margin: 2rem 0 2rem 0;
+}
+
+footer {
+    width: 100vw;
+    height: var(--footer-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--front-color);
+    border-top: 1px solid var(--outline-color);
+}
