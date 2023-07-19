@@ -4,35 +4,39 @@
     box-sizing: border-box;
 }
 
-:root {
+:root.light {
     --bg-color: #F9FAFB ;
     --front-color: #FFFFFF;
     --outline-color: #E4E7EB ;
     --text-color: #000000;
     --text-secondary-color: #8E949F;
     --btn-color: #0C766E;
+    --btn-text-color: #F9FAFB;
     --error-color: #ff0000;
     --header-height: 4rem;
     --footer-height: 3rem;
     --main-height: calc(100vh - var(--header-height) - var(--footer-height));
     --show-width: 2rem;
-    --theme-name: "light";
+    --input-border-color: rgb(228, 231, 235);
+    --input-bg-color: rgba(255,255,255,.5);
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root.dark {
         --bg-color: #101827;
         --front-color: #1F2937;
         --outline-color: #373F4B;
         --text-color: #D1D5DA;
         --text-secondary-color: #9CA3AF;
         --btn-color: #0C766E;
+        --btn-text-color: #D1D5DA;
         --error-color: #ff0000;
         --header-height: 4rem;
         --footer-height: 3rem;
         --main-height: calc(100vh - var(--header-height) - var(--footer-height));
         --show-width: 2rem;
-        --theme-name: "dark";
+        --input-border-color: rgb(107, 114, 128);
+        --input-bg-color: rgba(55,65,81,.5);
     }
 }
   
@@ -122,8 +126,8 @@ input {
     padding-left: 0.5rem;
     color: var(--text-color);
     border-radius: 0.3rem;
-    border: 1px solid rgb(107 114 128);
-    background-color: rgba(55,65,81,.5);
+    border: 1px solid var(--input-border-color);
+    background-color: var(--input-bg-color);
 }
 
 .show1, .show2 {
@@ -153,7 +157,7 @@ input:invalid {
 button {
     background-color: var(--btn-color);
     border: none;
-    color: var(--text-color);
+    color: var(--btn-text-color);
 
 }
 

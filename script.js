@@ -1,17 +1,23 @@
-function toggleTheme() {
-   
+function setTheme() {
+    const root = document.documentElement;
+    const newTheme = root.className === 'dark' ? 'light' : 'dark';
+    root.className = newTheme;
 }
   
-document.querySelector('.mode').addEventListener('click', toggleTheme);
+document.querySelector('#mode').addEventListener('click', setTheme)
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.className = 'dark';
+}
 
 function showErrors() {
     
 }
 
-// function passwordMatch() {
-//     const password = document.getElementById(p-word);
-//     const confPassword = document.getElementById(confirm-password);
-// }
+function passwordMatch() {
+    const password = document.getElementById(p-word);
+    const confPassword = document.getElementById(confirm-password);
+}
 
 function emailCheck() {
 
