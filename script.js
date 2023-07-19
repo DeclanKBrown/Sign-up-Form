@@ -11,21 +11,34 @@ function setTheme() {
         icon.innerHTML = "<i class=\"fa-regular fa-sun\"></i>"
     }
 }
-  
 document.querySelector('#mode').addEventListener('click', setTheme)
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.documentElement.className = 'dark';
 }
 
+//Function to show error
 function showErrors() {
     
 }
 
+//Pasword Match
+const pWord = document.querySelector('#password');
+const cPWord = document.querySelector('#confirm-password');
+const msg = document.querySelector('#cpwmessage');
 function passwordMatch() {
-    const password = document.getElementById(p-word);
-    const confPassword = document.getElementById(confirm-password);
+    console.log(pWord.value);
+    if (pWord.value !== cPWord.value) {
+        pWord.classList.add('inputInvalid');
+        cPWord.classList.add('inputInvalid');
+        msg.innerHTML = 'Passwords do not match';
+    } else {
+        pWord.classList.remove('inputInvalid');
+        cPWord.classList.remove('inputInvalid');
+        msg.innerHTML = '';
+    }
 }
+cPWord.addEventListener('blur', passwordMatch);
 
 function emailCheck() {
 

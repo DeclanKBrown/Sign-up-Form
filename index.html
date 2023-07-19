@@ -22,7 +22,7 @@
             <form class="sign-up" action="#" method="POST">
                 <div class="user-name">
                     <label for="user-name">USERNAME</label>
-                    <input autocomplete="username" type="text" id="user-name" name="user-name" pattern="^[a-z\d\.]{5,15}$" required>
+                    <input autocomplete="name" type="text" id="user-name" name="user-name" pattern="^[a-z\d\.]{5,15}$" required>
                 </div>
 
                 <div class="email">
@@ -49,6 +49,7 @@
                         <input autocomplete="off" type="password" id="confirm-password" name="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                         <button class="show2" type="button"><i class="fa-solid fa-eye-slash"></i></button>
                     </div>
+                    <span id='cpwmessage'></span>
                 </div>
 
                 <div class="submit-btn">

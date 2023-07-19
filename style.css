@@ -146,13 +146,18 @@ input, .show1, .show2 {
     margin-top: 0.8rem;
 }
 
-/* input:valid {
-    border: none;
+.inputValid {
+    border: green;
 }
 
-input:invalid {
+.inputInvalid {
     border-color: red;
-} */
+}
+
+#cpwmessage {
+    color: red;
+    font-size: 0.9rem;
+}
 
 button {
     background-color: var(--btn-color);
