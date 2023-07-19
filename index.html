@@ -10,10 +10,10 @@
 </head>
 <body>
     <nav class="nav">
-        <div class="div-inner">
+        <div class="nav-inner">
             <a href="#">Log In</a>
-            <span><i class="fa-duotone fa-moon"></i><span>
-            <button type="button">Create Account</button>
+            <button id="mode" type="button"><i class="fa-regular fa-moon"></i></button>
+            <button class="nav-create" type="button">Create Account</button>
         </div>
     </nav>
     <section class="main">
@@ -22,7 +22,7 @@
             <form class="sign-up" action="#" method="POST">
                 <div class="user-name">
                     <label for="user-name">USERNAME</label>
-                    <input type="text" id="user-name" name="user-name" pattern="^[a-z\d\.]{5,15}$">
+                    <input type="text" id="user-name" name="user-name" pattern="^[a-z\d\.]{5,15}$" required>
                 </div>
 
                 <div class="email">
@@ -37,17 +37,23 @@
 
                 <div class="password">
                     <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-                    <button type="button"><i class="fa-solid fa-eye-slash"></i></button>
+                    <div class="p-word">
+                        <input type="password" id="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        <button class="show" type="button"><i class="fa-solid fa-eye-slash"></i></button>
+                    </div>
                 </div>
                 
                 <div class="confirm-password">
                     <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm-password" name="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-                    <button type="button"><i class="fa-solid fa-eye-slash"></i></button>
+                    <div class="p-word">
+                        <input type="password" id="confirm-password" name="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        <button class="show" type="button"><i class="fa-solid fa-eye-slash"></i></button>
+                    </div>
                 </div>
 
-                <button type="submit">CREATE ACCOUNT</button>
+                <div class="submit-btn">
+                    <button id="submit-btn" type="submit">CREATE ACCOUNT</button>
+                </div>
             </form>
             <h3>Already have an account? <a href="#">Log in</a></h3>
         </div>
