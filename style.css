@@ -35,7 +35,7 @@
         --theme-name: "dark";
     }
 }
-
+  
 body {
     display: flex;
     flex-direction: column;
@@ -126,7 +126,7 @@ input {
     background-color: rgba(55,65,81,.5);
 }
 
-.show {
+.show1, .show2 {
     width: var(--show-width);
 }
 
@@ -138,17 +138,17 @@ input {
     display: flex;
 }
 
-input, .show {
+input, .show1, .show2 {
     margin-top: 0.8rem;
 }
 
-input::selection {
-    border-color: blue;
+/* input:valid {
+    border: none;
 }
 
-input:required:invalid {
+input:invalid {
     border-color: red;
-}
+} */
 
 button {
     background-color: var(--btn-color);
@@ -166,13 +166,17 @@ button:hover {
     opacity: 0.7;  
 }
 
-button:focus {
+button:active {
     opacity: 0.4; 
 }
 
-.show {
+.show1, .show2 {
     border-radius: 0.2rem;
     margin-left: 0.2rem;
+}
+
+.showFocus {
+    opacity: 0.7;
 }
 
 .nav-create {
@@ -187,8 +191,6 @@ button:focus {
     border-radius: 0.2rem;
     color: var(--text-color);
 }
-
-
 
 footer {
     width: 100vw;

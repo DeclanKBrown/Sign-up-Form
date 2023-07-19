@@ -12,7 +12,7 @@
     <nav class="nav">
         <div class="nav-inner">
             <a href="#">Log In</a>
-            <button id="mode" type="button"><i class="fa-regular fa-moon"></i></button>
+            <button class="mode" id="mode" type="button"><i class="fa-regular fa-moon"></i></button>
             <button class="nav-create" type="button">Create Account</button>
         </div>
     </nav>
@@ -22,32 +22,32 @@
             <form class="sign-up" action="#" method="POST">
                 <div class="user-name">
                     <label for="user-name">USERNAME</label>
-                    <input type="text" id="user-name" name="user-name" pattern="^[a-z\d\.]{5,15}$" required>
+                    <input autocomplete="username" type="text" id="user-name" name="user-name" pattern="^[a-z\d\.]{5,15}$" required>
                 </div>
 
                 <div class="email">
                     <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email" required>
+                    <input autocomplete="email" type="email" id="email" name="email" required>
                 </div>
 
                 <div class="phone-number">
                     <label for="phone-number">PHONE NUMBER</label>
-                    <input type="tel" id="phone-number" name="phone-number" placeholder="0123 456 789" pattern="\d{4}[\' ']\d{3}[\' ']\d{3}" required>
+                    <input autocomplete="tel" type="tel" id="phone-number" name="phone-number" placeholder="0123 456 789" pattern="\d{4}[\' ']\d{3}[\' ']\d{3}" required>
                 </div>
 
                 <div class="password">
                     <label for="password">PASSWORD</label>
                     <div class="p-word">
-                        <input type="password" id="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-                        <button class="show" type="button"><i class="fa-solid fa-eye-slash"></i></button>
+                        <input autocomplete="new-password" type="password" id="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        <button class="show1" type="button"><i class="fa-solid fa-eye-slash"></i></button>
                     </div>
                 </div>
                 
                 <div class="confirm-password">
                     <label for="confirm-password">CONFIRM PASSWORD</label>
                     <div class="p-word">
-                        <input type="password" id="confirm-password" name="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-                        <button class="show" type="button"><i class="fa-solid fa-eye-slash"></i></button>
+                        <input autocomplete="off" type="password" id="confirm-password" name="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        <button class="show2" type="button"><i class="fa-solid fa-eye-slash"></i></button>
                     </div>
                 </div>
 
