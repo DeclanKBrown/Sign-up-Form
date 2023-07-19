@@ -154,7 +154,7 @@ input, .show1, .show2 {
     border-color: red;
 }
 
-#cpwmessage {
+#emailMessage, #passwordMessage, #userMessage, #phoneMessage, #passMessage {
     color: red;
     font-size: 0.9rem;
 }
