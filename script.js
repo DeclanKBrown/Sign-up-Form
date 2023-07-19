@@ -1,7 +1,15 @@
+//toggle theme
 function setTheme() {
     const root = document.documentElement;
     const newTheme = root.className === 'dark' ? 'light' : 'dark';
     root.className = newTheme;
+
+    const icon = document.querySelector('#mode')
+    if (newTheme === 'dark') {
+        icon.innerHTML = "<i class=\"fa-regular fa-moon\"></i>"
+    } else {
+        icon.innerHTML = "<i class=\"fa-regular fa-sun\"></i>"
+    }
 }
   
 document.querySelector('#mode').addEventListener('click', setTheme)
